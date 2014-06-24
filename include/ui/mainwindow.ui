@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>405</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>50</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Pictorial Structures Demo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>0</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>405</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDetection">
+    <property name="title">
+     <string>Detection</string>
+    </property>
+    <addaction name="actionDetect"/>
+   </widget>
+   <widget class="QMenu" name="menuFiltering">
+    <property name="title">
+     <string>Filtering</string>
+    </property>
+    <addaction name="actionConfigure_filtering"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionTrain_Pictorial_Structure"/>
+    <addaction name="actionLoad_Pictorial_Structure"/>
+    <addaction name="actionSave_Pictorial_Structure"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuDetection"/>
+   <addaction name="menuFiltering"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionTrain_Pictorial_Structure">
+   <property name="text">
+    <string>Train Pictorial Structure</string>
+   </property>
+  </action>
+  <action name="actionLoad_Pictorial_Structure">
+   <property name="text">
+    <string>Load Pictorial Structure</string>
+   </property>
+  </action>
+  <action name="actionSave_Pictorial_Structure">
+   <property name="text">
+    <string>Save Pictorial Structure</string>
+   </property>
+  </action>
+  <action name="actionDetect">
+   <property name="text">
+    <string>Detect</string>
+   </property>
+  </action>
+  <action name="actionConfigure_filtering">
+   <property name="text">
+    <string>Configure filtering</string>
+   </property>
+  </action>
+  <action name="actionTrain">
+   <property name="text">
+    <string>Train</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionDetect</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>detect()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionConfigure_filtering</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>configureFiltering()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionTrain_Pictorial_Structure</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>trainPictorialStructure()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>202</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLoad_Pictorial_Structure</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>loadPictorialStructure()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>202</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSave_Pictorial_Structure</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>savePictorialStructure()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>202</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>detect()</slot>
+  <slot>configureFiltering()</slot>
+  <slot>trainPictorialStructure()</slot>
+  <slot>loadPictorialStructure()</slot>
+  <slot>savePictorialStructure()</slot>
+ </slots>
+</ui>
