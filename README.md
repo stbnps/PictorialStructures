@@ -20,5 +20,7 @@ References:
 http://www.cs.cornell.edu/~dph/papers/pict-struct-ijcv.pdf
 
 Dependencies:
+
 OpenCV (tested with 2.4.8)
+
 QT 5.X
