@@ -9,6 +9,8 @@ Two part filters have been implemented:
   
 The supported image transformations are image scaling and rotation. The part filters will be evaluated on all scales and orientations that the user selects.
 
+Note that only the part filters are evaluated on multiple scales. A global multiscale detection has not been implemented, keep that in mind when using the algorithm.
+
 The Kruskal algorithm has been implemented to automatically determine the best set of part relations.
 
 A small dataset library was developed to handle annotations persistance.
