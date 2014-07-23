@@ -13,9 +13,15 @@ Note that only the part filters are evaluated on multiple scales. A global multi
 
 The Kruskal algorithm has been implemented to automatically determine the best set of part relations.
 
-A small dataset library was developed to handle annotations persistance.
+A small dataset module was developed to handle annotations persistance.
 
 Once a pictorial structure has been trained, it can be saved to a YAML file. It also can be read.
+
+This algorithm uses my distance transform implementation:
+https://github.com/stbnps/Generalized-Distance-Transform
+
+And my implementation of the Kruskal algorithm:
+https://github.com/stbnps/Kruskal-building-block
 
 
 References:
